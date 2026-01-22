@@ -3,17 +3,17 @@ import tripsAppScreenshot from "@/assets/trips-app-screenshot.png";
 const PhoneMockup = () => {
   return (
     <div className="relative w-[280px] h-[570px] md:w-[320px] md:h-[650px] lg:w-[360px] lg:h-[730px]">
-      {/* Phone frame - black style */}
+      {/* Phone frame - silver/titanium style */}
       <div className="absolute inset-0 rounded-[45px] md:rounded-[50px] lg:rounded-[55px] shadow-2xl"
         style={{
-          background: 'linear-gradient(145deg, #2a2a2a 0%, #1a1a1a 25%, #0f0f0f 50%, #1a1a1a 75%, #2a2a2a 100%)',
+          background: 'linear-gradient(145deg, #e8e8e8 0%, #d4d4d4 25%, #c0c0c0 50%, #d8d8d8 75%, #f0f0f0 100%)',
         }}
       >
         {/* Inner bezel */}
         <div 
           className="absolute inset-[2px] rounded-[43px] md:rounded-[48px] lg:rounded-[53px]"
           style={{
-            background: 'linear-gradient(160deg, #1f1f1f 0%, #151515 50%, #0a0a0a 100%)',
+            background: 'linear-gradient(160deg, #f5f5f5 0%, #e0e0e0 50%, #d0d0d0 100%)',
           }}
         >
           {/* Screen area */}
@@ -37,21 +37,21 @@ const PhoneMockup = () => {
       {/* Side buttons - Volume (left) */}
       <div 
         className="absolute left-[-2px] top-[100px] md:top-[110px] lg:top-[120px] w-[3px] h-[25px] md:h-[28px] rounded-l-sm"
-        style={{ background: 'linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%)' }}
+        style={{ background: 'linear-gradient(180deg, #d0d0d0 0%, #b8b8b8 100%)' }}
       />
       <div 
         className="absolute left-[-2px] top-[135px] md:top-[148px] lg:top-[160px] w-[3px] h-[45px] md:h-[50px] rounded-l-sm"
-        style={{ background: 'linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%)' }}
+        style={{ background: 'linear-gradient(180deg, #d0d0d0 0%, #b8b8b8 100%)' }}
       />
       <div 
         className="absolute left-[-2px] top-[190px] md:top-[208px] lg:top-[220px] w-[3px] h-[45px] md:h-[50px] rounded-l-sm"
-        style={{ background: 'linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%)' }}
+        style={{ background: 'linear-gradient(180deg, #d0d0d0 0%, #b8b8b8 100%)' }}
       />
       
       {/* Side button - Power (right) */}
       <div 
         className="absolute right-[-2px] top-[150px] md:top-[165px] lg:top-[180px] w-[3px] h-[65px] md:h-[75px] rounded-r-sm"
-        style={{ background: 'linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%)' }}
+        style={{ background: 'linear-gradient(180deg, #d0d0d0 0%, #b8b8b8 100%)' }}
       />
     </div>
   );

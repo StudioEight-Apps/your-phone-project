@@ -4,69 +4,90 @@ import PhoneMockup from "./PhoneMockup";
 const Hero = () => {
   return (
     <section className="relative flex flex-col lg:flex-row items-center justify-between px-6 md:px-12 lg:px-24 py-12 lg:py-24 min-h-[calc(100vh-88px)] overflow-hidden">
-      
-      {/* Base background - warm off-white */}
+      {/* Background decorative "8" curves */}
       <div 
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: 'hsl(40 20% 96%)',
-        }}
-      />
-
-      {/* Subtle radial gradient - darker at edges, lighter behind phone */}
-      <div 
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: 'radial-gradient(ellipse 70% 80% at 65% 50%, transparent 0%, rgba(180, 170, 160, 0.15) 60%, rgba(160, 150, 140, 0.25) 100%)',
-        }}
-      />
-
-      {/* Film grain overlay */}
-      <div 
-        className="absolute inset-0 pointer-events-none opacity-[0.03]"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-        }}
-      />
-
-      {/* Studio Eight "8" SVG watermark */}
-      <svg 
-        className="absolute pointer-events-none select-none"
-        style={{
-          right: '-5%',
-          top: '50%',
-          transform: 'translateY(-50%)',
-          width: '700px',
-          height: '900px',
-          opacity: 0.08,
-          mixBlendMode: 'multiply',
-          filter: 'blur(3px)',
-        }}
-        viewBox="0 0 200 320"
-        fill="none"
+        className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none select-none w-[800px] h-[900px] md:w-[1000px] md:h-[1100px] lg:w-[1200px] lg:h-[1300px]"
+        style={{ right: '-10%' }}
         aria-hidden="true"
       >
-        {/* Upper loop of the 8 */}
-        <ellipse 
-          cx="100" 
-          cy="85" 
-          rx="65" 
-          ry="70" 
-          stroke="rgb(120, 115, 110)" 
-          strokeWidth="8"
-          fill="none"
-        />
-        {/* Lower loop of the 8 (slightly larger) */}
-        <ellipse 
-          cx="100" 
-          cy="230" 
-          rx="75" 
-          ry="80" 
-          stroke="rgb(120, 115, 110)" 
-          strokeWidth="8"
-          fill="none"
-        />
-      </svg>
+        {/* SVG curves forming an abstract "8" shape */}
+        <svg 
+          viewBox="0 0 600 700" 
+          fill="none" 
+          className="w-full h-full"
+          style={{ opacity: 0.12 }}
+        >
+          {/* Upper loop of the 8 */}
+          <ellipse 
+            cx="350" 
+            cy="200" 
+            rx="180" 
+            ry="160" 
+            stroke="currentColor" 
+            strokeWidth="0.8"
+            className="text-muted-foreground"
+            fill="none"
+            transform="rotate(-15 350 200)"
+          />
+          <ellipse 
+            cx="350" 
+            cy="200" 
+            rx="220" 
+            ry="190" 
+            stroke="currentColor" 
+            strokeWidth="0.5"
+            className="text-muted-foreground"
+            fill="none"
+            transform="rotate(-12 350 200)"
+          />
+          <ellipse 
+            cx="350" 
+            cy="200" 
+            rx="260" 
+            ry="220" 
+            stroke="currentColor" 
+            strokeWidth="0.3"
+            className="text-muted-foreground"
+            fill="none"
+            transform="rotate(-10 350 200)"
+          />
+          
+          {/* Lower loop of the 8 */}
+          <ellipse 
+            cx="320" 
+            cy="500" 
+            rx="200" 
+            ry="170" 
+            stroke="currentColor" 
+            strokeWidth="0.8"
+            className="text-muted-foreground"
+            fill="none"
+            transform="rotate(15 320 500)"
+          />
+          <ellipse 
+            cx="320" 
+            cy="500" 
+            rx="240" 
+            ry="200" 
+            stroke="currentColor" 
+            strokeWidth="0.5"
+            className="text-muted-foreground"
+            fill="none"
+            transform="rotate(12 320 500)"
+          />
+          <ellipse 
+            cx="320" 
+            cy="500" 
+            rx="280" 
+            ry="230" 
+            stroke="currentColor" 
+            strokeWidth="0.3"
+            className="text-muted-foreground"
+            fill="none"
+            transform="rotate(10 320 500)"
+          />
+        </svg>
+      </div>
 
       {/* Left content */}
       <div className="flex flex-col gap-6 max-w-xl mb-12 lg:mb-0 z-10">
@@ -89,30 +110,14 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Right content - Phone with layered depth shadows */}
+      {/* Right content - Phone mockup with shadow */}
       <div className="flex-shrink-0 z-10 relative">
-        {/* Outer halo shadow - large, soft */}
+        {/* Soft shadow/glow behind phone */}
         <div 
-          className="absolute -inset-32"
+          className="absolute inset-0 -inset-x-20 -inset-y-10"
           style={{
-            background: 'radial-gradient(ellipse 65% 60% at 50% 52%, rgba(60, 55, 50, 0.18) 0%, rgba(80, 75, 70, 0.08) 50%, transparent 80%)',
-            filter: 'blur(50px)',
-          }}
-        />
-        {/* Tight dark shadow - directly behind phone */}
-        <div 
-          className="absolute -inset-8"
-          style={{
-            background: 'radial-gradient(ellipse 90% 85% at 50% 54%, rgba(30, 28, 25, 0.35) 0%, rgba(40, 38, 35, 0.15) 45%, transparent 75%)',
-            filter: 'blur(25px)',
-          }}
-        />
-        {/* Bottom drop shadow - grounding */}
-        <div 
-          className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-[95%] h-28"
-          style={{
-            background: 'radial-gradient(ellipse 100% 100% at 50% 0%, rgba(25, 22, 20, 0.4) 0%, rgba(40, 38, 35, 0.15) 50%, transparent 80%)',
-            filter: 'blur(22px)',
+            background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.02) 50%, transparent 70%)',
+            filter: 'blur(40px)',
           }}
         />
         <PhoneMockup />
