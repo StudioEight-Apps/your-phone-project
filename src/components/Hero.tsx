@@ -5,131 +5,68 @@ const Hero = () => {
   return (
     <section className="relative flex flex-col lg:flex-row items-center justify-between px-6 md:px-12 lg:px-24 py-12 lg:py-24 min-h-[calc(100vh-88px)] overflow-hidden">
       
-      {/* Base background - warm neutral */}
+      {/* Base background - warm off-white */}
       <div 
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'linear-gradient(180deg, hsl(35 10% 93%) 0%, hsl(30 8% 89%) 100%)',
+          background: 'hsl(40 20% 96%)',
         }}
       />
 
-      {/* THE "8" - Upper loop shadow band */}
+      {/* Subtle radial gradient - darker at edges, lighter behind phone */}
       <div 
-        className="absolute pointer-events-none select-none"
-        style={{ 
-          right: '5%',
-          top: '0%',
-          width: '500px',
-          height: '400px',
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse 70% 80% at 65% 50%, transparent 0%, rgba(180, 170, 160, 0.15) 60%, rgba(160, 150, 140, 0.25) 100%)',
         }}
-        aria-hidden="true"
-      >
-        {/* Outer curved shadow - forms upper arc */}
-        <div 
-          className="absolute inset-0 rounded-full"
-          style={{
-            background: 'conic-gradient(from 180deg at 50% 60%, transparent 0deg, rgba(70, 62, 55, 0.06) 60deg, rgba(60, 52, 45, 0.08) 120deg, rgba(70, 62, 55, 0.06) 180deg, transparent 240deg, transparent 360deg)',
-            filter: 'blur(140px)',
-            transform: 'rotate(-15deg) scaleX(1.3)',
-          }}
-        />
-        {/* Inner depth shadow */}
-        <div 
-          className="absolute inset-[15%] rounded-full"
-          style={{
-            background: 'radial-gradient(ellipse 90% 80% at 50% 55%, transparent 30%, rgba(55, 48, 42, 0.05) 60%, transparent 85%)',
-            filter: 'blur(120px)',
-          }}
-        />
-      </div>
+      />
 
-      {/* THE "8" - Lower loop shadow band (larger) */}
+      {/* Film grain overlay */}
       <div 
-        className="absolute pointer-events-none select-none"
-        style={{ 
-          right: '-2%',
-          top: '35%',
-          width: '580px',
-          height: '480px',
+        className="absolute inset-0 pointer-events-none opacity-[0.03]"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
         }}
-        aria-hidden="true"
-      >
-        {/* Outer curved shadow - forms lower arc */}
-        <div 
-          className="absolute inset-0 rounded-full"
-          style={{
-            background: 'conic-gradient(from 0deg at 50% 45%, transparent 0deg, rgba(65, 58, 50, 0.07) 70deg, rgba(55, 48, 42, 0.08) 140deg, rgba(65, 58, 50, 0.06) 200deg, transparent 270deg, transparent 360deg)',
-            filter: 'blur(150px)',
-            transform: 'rotate(10deg) scaleX(1.25)',
-          }}
-        />
-        {/* Inner depth shadow */}
-        <div 
-          className="absolute inset-[12%] rounded-full"
-          style={{
-            background: 'radial-gradient(ellipse 85% 90% at 50% 50%, transparent 25%, rgba(50, 44, 38, 0.055) 55%, transparent 80%)',
-            filter: 'blur(130px)',
-          }}
-        />
-      </div>
+      />
 
-      {/* Connection shadow - waist of the 8 */}
-      <div 
+      {/* Studio Eight "8" SVG watermark */}
+      <svg 
         className="absolute pointer-events-none select-none"
-        style={{ 
-          right: '12%',
-          top: '32%',
-          width: '280px',
-          height: '220px',
+        style={{
+          right: '-5%',
+          top: '50%',
+          transform: 'translateY(-50%)',
+          width: '700px',
+          height: '900px',
+          opacity: 0.08,
+          mixBlendMode: 'multiply',
+          filter: 'blur(3px)',
         }}
+        viewBox="0 0 200 320"
+        fill="none"
         aria-hidden="true"
       >
-        <div 
-          className="absolute inset-0"
-          style={{
-            background: 'radial-gradient(ellipse 100% 60% at 50% 50%, rgba(60, 54, 48, 0.065) 0%, transparent 70%)',
-            filter: 'blur(100px)',
-          }}
+        {/* Upper loop of the 8 */}
+        <ellipse 
+          cx="100" 
+          cy="85" 
+          rx="65" 
+          ry="70" 
+          stroke="rgb(120, 115, 110)" 
+          strokeWidth="8"
+          fill="none"
         />
-      </div>
-
-      {/* Ambient light pushing through - makes 8 readable */}
-      <div 
-        className="absolute pointer-events-none select-none"
-        style={{ 
-          right: '8%',
-          top: '10%',
-          width: '400px',
-          height: '320px',
-        }}
-        aria-hidden="true"
-      >
-        <div 
-          className="absolute inset-0 rounded-full"
-          style={{
-            background: 'radial-gradient(ellipse at 50% 55%, rgba(255, 253, 250, 0.25) 0%, transparent 55%)',
-            filter: 'blur(80px)',
-          }}
+        {/* Lower loop of the 8 (slightly larger) */}
+        <ellipse 
+          cx="100" 
+          cy="230" 
+          rx="75" 
+          ry="80" 
+          stroke="rgb(120, 115, 110)" 
+          strokeWidth="8"
+          fill="none"
         />
-      </div>
-      <div 
-        className="absolute pointer-events-none select-none"
-        style={{ 
-          right: '2%',
-          top: '45%',
-          width: '450px',
-          height: '380px',
-        }}
-        aria-hidden="true"
-      >
-        <div 
-          className="absolute inset-0 rounded-full"
-          style={{
-            background: 'radial-gradient(ellipse at 50% 50%, rgba(255, 254, 252, 0.22) 0%, transparent 50%)',
-            filter: 'blur(90px)',
-          }}
-        />
-      </div>
+      </svg>
 
       {/* Left content */}
       <div className="flex flex-col gap-6 max-w-xl mb-12 lg:mb-0 z-10">
@@ -154,44 +91,28 @@ const Hero = () => {
 
       {/* Right content - Phone with layered depth shadows */}
       <div className="flex-shrink-0 z-10 relative">
-        {/* Outer atmospheric shadow - very large, light */}
-        <div 
-          className="absolute -inset-48"
-          style={{
-            background: 'radial-gradient(ellipse 60% 55% at 50% 52%, rgba(90, 80, 72, 0.12) 0%, rgba(80, 72, 65, 0.06) 45%, transparent 75%)',
-            filter: 'blur(80px)',
-          }}
-        />
-        {/* Mid shadow - reinforces 8 edge */}
+        {/* Outer halo shadow - large, soft */}
         <div 
           className="absolute -inset-32"
           style={{
-            background: 'radial-gradient(ellipse 70% 62% at 50% 54%, rgba(70, 62, 55, 0.16) 0%, rgba(60, 54, 48, 0.08) 40%, transparent 70%)',
-            filter: 'blur(55px)',
+            background: 'radial-gradient(ellipse 65% 60% at 50% 52%, rgba(60, 55, 50, 0.18) 0%, rgba(80, 75, 70, 0.08) 50%, transparent 80%)',
+            filter: 'blur(50px)',
           }}
         />
-        {/* Close shadow - darker, tighter */}
+        {/* Tight dark shadow - directly behind phone */}
         <div 
-          className="absolute -inset-16"
+          className="absolute -inset-8"
           style={{
-            background: 'radial-gradient(ellipse 80% 70% at 50% 55%, rgba(50, 44, 40, 0.22) 0%, rgba(55, 50, 45, 0.1) 45%, transparent 72%)',
-            filter: 'blur(35px)',
-          }}
-        />
-        {/* Tight edge shadow */}
-        <div 
-          className="absolute -inset-6"
-          style={{
-            background: 'radial-gradient(ellipse 95% 85% at 50% 54%, rgba(40, 36, 32, 0.15) 0%, rgba(45, 40, 36, 0.06) 50%, transparent 70%)',
-            filter: 'blur(18px)',
+            background: 'radial-gradient(ellipse 90% 85% at 50% 54%, rgba(30, 28, 25, 0.35) 0%, rgba(40, 38, 35, 0.15) 45%, transparent 75%)',
+            filter: 'blur(25px)',
           }}
         />
         {/* Bottom drop shadow - grounding */}
         <div 
-          className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[90%] h-24"
+          className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-[95%] h-28"
           style={{
-            background: 'radial-gradient(ellipse 100% 100% at 50% 0%, rgba(35, 32, 28, 0.28) 0%, rgba(50, 45, 40, 0.12) 45%, transparent 75%)',
-            filter: 'blur(20px)',
+            background: 'radial-gradient(ellipse 100% 100% at 50% 0%, rgba(25, 22, 20, 0.4) 0%, rgba(40, 38, 35, 0.15) 50%, transparent 80%)',
+            filter: 'blur(22px)',
           }}
         />
         <PhoneMockup />
