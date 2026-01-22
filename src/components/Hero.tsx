@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import PhoneMockup from "./PhoneMockup";
 
 const Hero = () => {
@@ -100,13 +101,15 @@ const Hero = () => {
           We design and build intelligent products that create direct, durable relationships with users.
         </p>
         <div className="mt-2">
-          <Button 
-            variant="default" 
-            size="lg"
-            className="rounded-full px-8 py-6 text-base font-medium"
-          >
-            Work with Studio Eight
-          </Button>
+          <Link to="/contact">
+            <Button 
+              variant="default" 
+              size="lg"
+              className="rounded-full px-8 py-6 text-base font-medium"
+            >
+              Let's work
+            </Button>
+          </Link>
         </div>
       </div>
 
