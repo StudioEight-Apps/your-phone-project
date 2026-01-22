@@ -2,15 +2,24 @@ import tripsAppScreenshot from "@/assets/trips-app-screenshot.png";
 
 const PhoneMockup = () => {
   return (
-    <div className="relative w-[320px] h-[650px] md:w-[380px] md:h-[770px]">
-      {/* Phone frame */}
-      <div className="absolute inset-0 bg-gradient-to-br from-zinc-700 via-zinc-800 to-zinc-900 rounded-[50px] md:rounded-[60px] shadow-2xl">
+    <div className="relative w-[280px] h-[570px] md:w-[320px] md:h-[650px] lg:w-[360px] lg:h-[730px]">
+      {/* Phone frame - silver/titanium style */}
+      <div className="absolute inset-0 rounded-[45px] md:rounded-[50px] lg:rounded-[55px] shadow-2xl"
+        style={{
+          background: 'linear-gradient(145deg, #e8e8e8 0%, #d4d4d4 25%, #c0c0c0 50%, #d8d8d8 75%, #f0f0f0 100%)',
+        }}
+      >
         {/* Inner bezel */}
-        <div className="absolute inset-[3px] bg-gradient-to-br from-zinc-600 to-zinc-800 rounded-[47px] md:rounded-[57px]">
+        <div 
+          className="absolute inset-[2px] rounded-[43px] md:rounded-[48px] lg:rounded-[53px]"
+          style={{
+            background: 'linear-gradient(160deg, #f5f5f5 0%, #e0e0e0 50%, #d0d0d0 100%)',
+          }}
+        >
           {/* Screen area */}
-          <div className="absolute inset-[10px] md:inset-[12px] bg-black rounded-[38px] md:rounded-[46px] overflow-hidden">
+          <div className="absolute inset-[8px] md:inset-[10px] bg-black rounded-[36px] md:rounded-[40px] lg:rounded-[44px] overflow-hidden">
             {/* Dynamic Island */}
-            <div className="absolute top-3 left-1/2 -translate-x-1/2 w-[100px] md:w-[120px] h-[30px] md:h-[35px] bg-black rounded-full z-10" />
+            <div className="absolute top-3 left-1/2 -translate-x-1/2 w-[90px] md:w-[100px] lg:w-[110px] h-[28px] md:h-[32px] lg:h-[34px] bg-black rounded-full z-10" />
             
             {/* App screenshot */}
             <img 
@@ -20,18 +29,30 @@ const PhoneMockup = () => {
             />
             
             {/* Home indicator */}
-            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-[120px] md:w-[140px] h-[5px] bg-white/50 rounded-full" />
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-[100px] md:w-[120px] lg:w-[130px] h-[4px] md:h-[5px] bg-white/40 rounded-full" />
           </div>
         </div>
       </div>
       
-      {/* Side buttons - Volume */}
-      <div className="absolute left-[-2px] top-[120px] w-[3px] h-[30px] bg-zinc-700 rounded-l-sm" />
-      <div className="absolute left-[-2px] top-[160px] w-[3px] h-[55px] bg-zinc-700 rounded-l-sm" />
-      <div className="absolute left-[-2px] top-[225px] w-[3px] h-[55px] bg-zinc-700 rounded-l-sm" />
+      {/* Side buttons - Volume (left) */}
+      <div 
+        className="absolute left-[-2px] top-[100px] md:top-[110px] lg:top-[120px] w-[3px] h-[25px] md:h-[28px] rounded-l-sm"
+        style={{ background: 'linear-gradient(180deg, #d0d0d0 0%, #b8b8b8 100%)' }}
+      />
+      <div 
+        className="absolute left-[-2px] top-[135px] md:top-[148px] lg:top-[160px] w-[3px] h-[45px] md:h-[50px] rounded-l-sm"
+        style={{ background: 'linear-gradient(180deg, #d0d0d0 0%, #b8b8b8 100%)' }}
+      />
+      <div 
+        className="absolute left-[-2px] top-[190px] md:top-[208px] lg:top-[220px] w-[3px] h-[45px] md:h-[50px] rounded-l-sm"
+        style={{ background: 'linear-gradient(180deg, #d0d0d0 0%, #b8b8b8 100%)' }}
+      />
       
-      {/* Side button - Power */}
-      <div className="absolute right-[-2px] top-[180px] w-[3px] h-[80px] bg-zinc-700 rounded-r-sm" />
+      {/* Side button - Power (right) */}
+      <div 
+        className="absolute right-[-2px] top-[150px] md:top-[165px] lg:top-[180px] w-[3px] h-[65px] md:h-[75px] rounded-r-sm"
+        style={{ background: 'linear-gradient(180deg, #d0d0d0 0%, #b8b8b8 100%)' }}
+      />
     </div>
   );
 };
