@@ -4,22 +4,89 @@ import PhoneMockup from "./PhoneMockup";
 const Hero = () => {
   return (
     <section className="relative flex flex-col lg:flex-row items-center justify-between px-6 md:px-12 lg:px-24 py-12 lg:py-24 min-h-[calc(100vh-88px)] overflow-hidden">
-      {/* Background "8" - atmospheric, blurred */}
+      {/* Background decorative "8" curves */}
       <div 
-        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/4 pointer-events-none select-none"
+        className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none select-none w-[800px] h-[900px] md:w-[1000px] md:h-[1100px] lg:w-[1200px] lg:h-[1300px]"
+        style={{ right: '-10%' }}
         aria-hidden="true"
       >
-        <span 
-          className="text-[600px] md:text-[800px] lg:text-[1000px] font-bold text-foreground leading-none block"
-          style={{ 
-            opacity: 0.04,
-            filter: 'blur(8px)',
-            fontFamily: 'Inter, sans-serif',
-            fontWeight: 600
-          }}
+        {/* SVG curves forming an abstract "8" shape */}
+        <svg 
+          viewBox="0 0 600 700" 
+          fill="none" 
+          className="w-full h-full"
+          style={{ opacity: 0.12 }}
         >
-          8
-        </span>
+          {/* Upper loop of the 8 */}
+          <ellipse 
+            cx="350" 
+            cy="200" 
+            rx="180" 
+            ry="160" 
+            stroke="currentColor" 
+            strokeWidth="0.8"
+            className="text-muted-foreground"
+            fill="none"
+            transform="rotate(-15 350 200)"
+          />
+          <ellipse 
+            cx="350" 
+            cy="200" 
+            rx="220" 
+            ry="190" 
+            stroke="currentColor" 
+            strokeWidth="0.5"
+            className="text-muted-foreground"
+            fill="none"
+            transform="rotate(-12 350 200)"
+          />
+          <ellipse 
+            cx="350" 
+            cy="200" 
+            rx="260" 
+            ry="220" 
+            stroke="currentColor" 
+            strokeWidth="0.3"
+            className="text-muted-foreground"
+            fill="none"
+            transform="rotate(-10 350 200)"
+          />
+          
+          {/* Lower loop of the 8 */}
+          <ellipse 
+            cx="320" 
+            cy="500" 
+            rx="200" 
+            ry="170" 
+            stroke="currentColor" 
+            strokeWidth="0.8"
+            className="text-muted-foreground"
+            fill="none"
+            transform="rotate(15 320 500)"
+          />
+          <ellipse 
+            cx="320" 
+            cy="500" 
+            rx="240" 
+            ry="200" 
+            stroke="currentColor" 
+            strokeWidth="0.5"
+            className="text-muted-foreground"
+            fill="none"
+            transform="rotate(12 320 500)"
+          />
+          <ellipse 
+            cx="320" 
+            cy="500" 
+            rx="280" 
+            ry="230" 
+            stroke="currentColor" 
+            strokeWidth="0.3"
+            className="text-muted-foreground"
+            fill="none"
+            transform="rotate(10 320 500)"
+          />
+        </svg>
       </div>
 
       {/* Left content */}
@@ -43,8 +110,16 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Right content - Phone mockup */}
-      <div className="flex-shrink-0 z-10">
+      {/* Right content - Phone mockup with shadow */}
+      <div className="flex-shrink-0 z-10 relative">
+        {/* Soft shadow/glow behind phone */}
+        <div 
+          className="absolute inset-0 -inset-x-20 -inset-y-10"
+          style={{
+            background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.02) 50%, transparent 70%)',
+            filter: 'blur(40px)',
+          }}
+        />
         <PhoneMockup />
       </div>
     </section>
