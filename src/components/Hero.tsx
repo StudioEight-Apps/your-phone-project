@@ -9,95 +9,114 @@ const Hero = () => {
       <div 
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'linear-gradient(180deg, hsl(30 12% 92%) 0%, hsl(28 10% 88%) 100%)',
+          background: 'linear-gradient(180deg, hsl(30 8% 91%) 0%, hsl(28 6% 87%) 100%)',
         }}
       />
 
-      {/* THE "8" - Upper loop - soft cream dimensional shape */}
+      {/* THE "8" - visible with dark strokes */}
       <div 
         className="absolute pointer-events-none select-none"
         style={{ 
-          right: '12%',
-          top: '2%',
-          width: '380px',
-          height: '340px',
+          right: '-5%',
+          top: '50%',
+          transform: 'translateY(-50%)',
+          width: '700px',
+          height: '900px',
         }}
         aria-hidden="true"
       >
-        {/* Outer glow - cream highlight */}
+        <svg 
+          viewBox="0 0 400 520" 
+          fill="none" 
+          className="w-full h-full"
+        >
+          {/* Upper loop of the 8 */}
+          <ellipse 
+            cx="200" 
+            cy="155" 
+            rx="130" 
+            ry="120" 
+            stroke="rgba(60, 55, 50, 0.15)"
+            strokeWidth="45"
+            fill="none"
+          />
+          <ellipse 
+            cx="200" 
+            cy="155" 
+            rx="130" 
+            ry="120" 
+            stroke="rgba(80, 75, 70, 0.08)"
+            strokeWidth="80"
+            fill="none"
+          />
+          
+          {/* Lower loop of the 8 - slightly larger */}
+          <ellipse 
+            cx="200" 
+            cy="365" 
+            rx="145" 
+            ry="130" 
+            stroke="rgba(60, 55, 50, 0.15)"
+            strokeWidth="45"
+            fill="none"
+          />
+          <ellipse 
+            cx="200" 
+            cy="365" 
+            rx="145" 
+            ry="130" 
+            stroke="rgba(80, 75, 70, 0.08)"
+            strokeWidth="80"
+            fill="none"
+          />
+        </svg>
+        
+        {/* Blur overlay to soften the edges */}
         <div 
-          className="absolute inset-0 rounded-full"
+          className="absolute inset-0"
           style={{
-            background: 'radial-gradient(ellipse 100% 90% at 50% 50%, rgba(255, 252, 248, 0.7) 0%, rgba(250, 248, 244, 0.4) 40%, transparent 70%)',
-            filter: 'blur(40px)',
-            transform: 'rotate(-8deg)',
-          }}
-        />
-        {/* Inner soft shape */}
-        <div 
-          className="absolute inset-[10%] rounded-full"
-          style={{
-            background: 'radial-gradient(ellipse 95% 85% at 50% 50%, rgba(255, 253, 250, 0.5) 0%, rgba(252, 250, 246, 0.25) 50%, transparent 75%)',
-            filter: 'blur(25px)',
-            transform: 'rotate(-5deg)',
+            backdropFilter: 'blur(20px)',
+            WebkitBackdropFilter: 'blur(20px)',
+            mask: 'radial-gradient(ellipse 100% 100% at 50% 50%, black 30%, transparent 70%)',
+            WebkitMask: 'radial-gradient(ellipse 100% 100% at 50% 50%, black 30%, transparent 70%)',
           }}
         />
       </div>
 
-      {/* THE "8" - Lower loop - larger, soft cream dimensional shape */}
-      <div 
-        className="absolute pointer-events-none select-none"
-        style={{ 
-          right: '5%',
-          top: '35%',
-          width: '480px',
-          height: '420px',
-        }}
-        aria-hidden="true"
-      >
-        {/* Outer glow - cream highlight */}
-        <div 
-          className="absolute inset-0 rounded-full"
-          style={{
-            background: 'radial-gradient(ellipse 95% 100% at 50% 50%, rgba(255, 253, 250, 0.65) 0%, rgba(250, 248, 244, 0.35) 45%, transparent 72%)',
-            filter: 'blur(45px)',
-            transform: 'rotate(5deg)',
-          }}
-        />
-        {/* Inner soft shape */}
-        <div 
-          className="absolute inset-[8%] rounded-full"
-          style={{
-            background: 'radial-gradient(ellipse 90% 95% at 50% 50%, rgba(255, 254, 252, 0.45) 0%, rgba(252, 250, 248, 0.2) 55%, transparent 78%)',
-            filter: 'blur(30px)',
-            transform: 'rotate(3deg)',
-          }}
-        />
-      </div>
-
-      {/* Subtle edge shadows on the "8" for depth */}
+      {/* Soft cream fill inside the 8 loops for depth */}
       <div 
         className="absolute pointer-events-none select-none"
         style={{ 
           right: '8%',
-          top: '20%',
-          width: '500px',
-          height: '550px',
+          top: '8%',
+          width: '350px',
+          height: '300px',
         }}
         aria-hidden="true"
       >
         <div 
-          className="absolute inset-0"
+          className="absolute inset-0 rounded-full"
           style={{
-            background: 'radial-gradient(ellipse 60% 50% at 65% 30%, transparent 40%, rgba(180, 170, 160, 0.08) 70%, transparent 90%)',
-            filter: 'blur(30px)',
+            background: 'radial-gradient(ellipse at center, rgba(255, 252, 248, 0.5) 0%, transparent 60%)',
+            filter: 'blur(35px)',
           }}
         />
+      </div>
+      <div 
+        className="absolute pointer-events-none select-none"
+        style={{ 
+          right: '3%',
+          top: '42%',
+          width: '400px',
+          height: '350px',
+        }}
+        aria-hidden="true"
+      >
         <div 
-          className="absolute inset-0"
+          className="absolute inset-0 rounded-full"
           style={{
-            background: 'radial-gradient(ellipse 55% 60% at 55% 75%, transparent 35%, rgba(170, 160, 150, 0.1) 65%, transparent 88%)',
-            filter: 'blur(35px)',
+            background: 'radial-gradient(ellipse at center, rgba(255, 253, 250, 0.45) 0%, transparent 55%)',
+            filter: 'blur(40px)',
           }}
         />
       </div>
