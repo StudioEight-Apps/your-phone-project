@@ -8,7 +8,7 @@ const ProcessSection = () => {
       number: "01",
       icon: MessageSquare,
       title: "Discovery",
-      description: "We listen to your ideas and understand your goals to create a solid foundation.",
+      description: "We go through discovery specific to your industry and define your customer's ideal user experience.",
     },
     {
       number: "02",
@@ -39,7 +39,7 @@ const ProcessSection = () => {
             Our Process
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-            A streamlined approach to transform your ideas into reality
+            We build products that give you a competitive advantage in your industry.
           </p>
         </div>
 
@@ -49,10 +49,10 @@ const ProcessSection = () => {
             <div key={index} className="flex flex-col items-center text-center">
               {/* Icon with number badge */}
               <div className="relative mb-6">
-                <div className="w-20 h-20 rounded-full bg-secondary/50 border border-border flex items-center justify-center group-hover:border-muted-foreground/50 transition-colors">
-                  <step.icon className="w-8 h-8 text-primary" />
+                <div className="w-20 h-20 rounded-full bg-secondary/50 border border-neon/20 flex items-center justify-center hover:border-neon/40 transition-colors">
+                  <step.icon className="w-8 h-8 text-neon" />
                 </div>
-                <span className="absolute -top-1 -right-1 w-7 h-7 rounded-full bg-background border border-border text-xs font-medium text-muted-foreground flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 w-7 h-7 rounded-full bg-background border border-neon/30 text-xs font-medium text-neon flex items-center justify-center">
                   {step.number}
                 </span>
               </div>
