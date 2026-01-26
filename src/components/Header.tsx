@@ -35,10 +35,10 @@ const Header = () => {
       </nav>
       <Link to="/contact">
         <Button 
-          variant="default" 
-          className="rounded-full px-6 font-medium"
+          variant="chrome" 
+          className="rounded-full px-6"
         >
-          Book a Call
+          Let's work
         </Button>
       </Link>
     </header>

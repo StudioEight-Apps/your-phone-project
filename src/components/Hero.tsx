@@ -102,11 +102,11 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-4 mt-2">
           <Link to="/contact">
             <Button 
-              variant="default" 
+              variant="chrome" 
               size="lg"
-              className="rounded-full px-8 py-6 text-base font-medium"
+              className="rounded-full px-8 py-6 text-base"
             >
-              Book a Call
+              Let's work
             </Button>
           </Link>
           <Link to="/for-businesses">
