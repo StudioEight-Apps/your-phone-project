@@ -7,7 +7,7 @@ const Logo = () => {
       <img 
         src={studioEightLogo} 
         alt="Studio Eight" 
-        className="h-14 md:h-16 w-auto"
+        className="h-20 md:h-24 w-auto"
       />
     </Link>
   );

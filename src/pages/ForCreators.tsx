@@ -75,11 +75,11 @@ const ForCreators = () => {
 
       {/* Value Props */}
       <section className="px-6 md:px-12 lg:px-24 py-16 lg:py-24 border-t border-border">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-10">
             What we bring to the table
           </h2>
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 items-center">
             {valueProps.map((prop, index) => (
               <div key={index} className="flex items-center gap-4">
                 <div className="flex-shrink-0 w-6 h-6 rounded-full bg-foreground flex items-center justify-center">
