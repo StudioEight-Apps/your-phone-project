@@ -30,12 +30,12 @@ const ForBusinesses = () => {
       <section className="px-6 md:px-12 lg:px-24 py-20 lg:py-32">
         <div className="max-w-4xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight tracking-tight text-foreground mb-6">
-            Meet your customers
+            Own the relationship.
             <br />
-            where they already are.
+            Not the algorithm.
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
-            Most businesses rely on rented attention. We help you own the relationship.
+            We design and build apps that give you a direct, durable channel to your customers and the data to compound it.
           </p>
         </div>
       </section>
