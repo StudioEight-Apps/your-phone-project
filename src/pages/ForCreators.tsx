@@ -57,10 +57,10 @@ const ForCreators = () => {
           {messagingBlocks.map((block, index) => (
             <div 
               key={index} 
-              className="p-6 lg:p-8 rounded-2xl bg-secondary/30 border border-border hover:border-muted-foreground/30 transition-all duration-300 group"
+              className="p-6 lg:p-8 rounded-2xl bg-secondary/30 border border-border hover:border-neon/30 transition-all duration-300 group"
             >
-              <div className="w-14 h-14 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary/15 transition-colors">
-                <block.icon className="w-6 h-6 text-primary" />
+              <div className="w-14 h-14 rounded-full bg-neon/10 border border-neon/20 flex items-center justify-center mb-6 group-hover:bg-neon/15 transition-colors">
+                <block.icon className="w-6 h-6 text-neon" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">
                 {block.title}

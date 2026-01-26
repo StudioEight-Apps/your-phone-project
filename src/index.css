@@ -44,6 +44,10 @@
     --cta: 0 0% 100%;
     --cta-foreground: 220 10% 8%;
     
+    /* Neon green accent */
+    --neon: 142 71% 45%;
+    --neon-foreground: 220 10% 8%;
+    
     --sidebar-background: 220 10% 6%;
     --sidebar-foreground: 0 0% 98%;
     --sidebar-primary: 0 0% 100%;
