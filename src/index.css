@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Dark charcoal theme - premium, confident aesthetic */
+    --background: 220 10% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 10% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 10% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 100%;
+    --primary-foreground: 220 10% 8%;
+
+    --secondary: 220 10% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 220 8% 18%;
+    --muted-foreground: 220 5% 55%;
+
+    --accent: 220 10% 15%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 8% 18%;
+    --input: 220 8% 18%;
+    --ring: 0 0% 100%;
+
+    --radius: 0.5rem;
+
+    /* Custom tokens - dark gradient */
+    --gradient-hero: linear-gradient(180deg, hsl(220 10% 8%) 0%, hsl(220 12% 6%) 100%);
+    
+    /* Neon green accent */
+    --neon: 142 71% 45%;
+    --neon-foreground: 220 10% 8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .bg-hero-gradient {
+    background: var(--gradient-hero);
+  }
+}
