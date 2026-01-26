@@ -3,8 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import Header from "@/components/Header";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -28,25 +27,13 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="flex items-center justify-between px-6 md:px-12 lg:px-24 py-6">
-        <Link to="/" className="text-xl font-medium tracking-tight text-foreground">
-          Studio Eight
-        </Link>
-        <Link 
-          to="/" 
-          className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          Back
-        </Link>
-      </header>
+    <div className="min-h-screen bg-hero-gradient">
+      <Header />
 
       {/* Form Section */}
       <main className="px-6 md:px-12 lg:px-24 py-12 lg:py-24">
         <div className="max-w-xl">
-          <h1 className="text-3xl md:text-4xl font-medium tracking-tight text-foreground mb-4">
+          <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground mb-4">
             Let's work together
           </h1>
           <p className="text-muted-foreground mb-12">
@@ -66,7 +53,7 @@ const Contact = () => {
                 required
                 value={formData.name}
                 onChange={handleChange}
-                className="border-border/50 focus:border-foreground transition-colors"
+                className="bg-secondary border-border focus:border-foreground transition-colors"
               />
             </div>
 
@@ -82,7 +69,7 @@ const Contact = () => {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="border-border/50 focus:border-foreground transition-colors"
+                className="bg-secondary border-border focus:border-foreground transition-colors"
               />
             </div>
 
@@ -97,7 +84,7 @@ const Contact = () => {
                 type="tel"
                 value={formData.phone}
                 onChange={handleChange}
-                className="border-border/50 focus:border-foreground transition-colors"
+                className="bg-secondary border-border focus:border-foreground transition-colors"
               />
             </div>
 
@@ -113,7 +100,7 @@ const Contact = () => {
                 required
                 value={formData.company}
                 onChange={handleChange}
-                className="border-border/50 focus:border-foreground transition-colors"
+                className="bg-secondary border-border focus:border-foreground transition-colors"
               />
             </div>
 
@@ -129,7 +116,7 @@ const Contact = () => {
                 value={formData.website}
                 onChange={handleChange}
                 placeholder="https://"
-                className="border-border/50 focus:border-foreground transition-colors"
+                className="bg-secondary border-border focus:border-foreground transition-colors placeholder:text-muted-foreground/50"
               />
             </div>
 
@@ -145,7 +132,7 @@ const Contact = () => {
                 value={formData.social}
                 onChange={handleChange}
                 placeholder="@"
-                className="border-border/50 focus:border-foreground transition-colors"
+                className="bg-secondary border-border focus:border-foreground transition-colors placeholder:text-muted-foreground/50"
               />
             </div>
 
@@ -161,7 +148,7 @@ const Contact = () => {
                 value={formData.pitch}
                 onChange={handleChange}
                 rows={4}
-                className="border-border/50 focus:border-foreground transition-colors resize-none"
+                className="bg-secondary border-border focus:border-foreground transition-colors resize-none"
               />
             </div>
 
