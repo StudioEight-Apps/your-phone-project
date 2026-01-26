@@ -66,9 +66,9 @@ const ForBusinesses = () => {
       <section className="px-6 md:px-12 lg:px-24 py-20 lg:py-32 border-t border-border">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-2xl md:text-3xl font-medium text-foreground mb-8 leading-relaxed">
-            "We don't build websites.
+            "Users spend over 6 hours a day on their phones.
             <br />
-            We build owned distribution."
+            Meet them where they already are."
           </p>
           <Link to="/contact">
             <Button 

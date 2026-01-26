@@ -1,14 +1,30 @@
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Check } from "lucide-react";
+import { Check, Paintbrush, DollarSign, Building, Percent } from "lucide-react";
 
 const ForCreators = () => {
   const messagingBlocks = [
-    "You've already built attention. Social platforms are noisy and fragile.",
-    "We help creators dominate their niche by turning distribution into a product.",
-    "Subscription-based apps with real ownership and long-term value.",
-    "A scalable, exitable business aligned with your brand.",
+    {
+      icon: Paintbrush,
+      title: "We handle design, development, and launch",
+      description: "You've already built attention. Social platforms are noisy and fragile.",
+    },
+    {
+      icon: DollarSign,
+      title: "Monetize with monthly subscriptions",
+      description: "We help creators dominate their niche by turning distribution into a product.",
+    },
+    {
+      icon: Building,
+      title: "Build equity in something you actually own",
+      description: "Subscription-based apps with real ownership and long-term value.",
+    },
+    {
+      icon: Percent,
+      title: "50/50 Revenue Split",
+      description: "We partner long term. You keep meaningful equity while sharing upside as the product scales.",
+    },
   ];
 
   const valueProps = [
@@ -35,16 +51,22 @@ const ForCreators = () => {
         </div>
       </section>
 
-      {/* Messaging Blocks */}
+      {/* Value Cards Section */}
       <section className="px-6 md:px-12 lg:px-24 py-16 lg:py-24">
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl">
-          {messagingBlocks.map((message, index) => (
+          {messagingBlocks.map((block, index) => (
             <div 
               key={index} 
-              className="p-6 lg:p-8 rounded-2xl bg-secondary/50 border border-border"
+              className="p-6 lg:p-8 rounded-2xl bg-secondary/30 border border-border hover:border-muted-foreground/30 transition-all duration-300 group"
             >
-              <p className="text-lg text-foreground leading-relaxed">
-                {message}
+              <div className="w-14 h-14 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary/15 transition-colors">
+                <block.icon className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-3">
+                {block.title}
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                {block.description}
               </p>
             </div>
           ))}
